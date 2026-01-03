@@ -44,18 +44,18 @@ VALUES
 ('rahul@gmail.com', 'rahul', 'Rahul Sharma', 1, 'pass456', '9123456780'),
 ('neha@gmail.com', 'neha', 'Neha Verma', 1, 'pass789', '9988776655');
 
-INSERT INTO categorys
-(user_id, category_name, description, icon_url, transcation_type)
-VALUES
-(1, 'Salary', 'Monthly salary', 'salary.png', 'INCOME'),
-(1, 'Food', 'Daily food expenses', 'food.png', 'EXPENSE'),
-(1, 'Travel', 'Transport & fuel', 'travel.png', 'EXPENSE'),
+    INSERT INTO categorys
+    (user_id, category_name, description, icon_url, transcation_type)
+    VALUES
+    (1, 'Salary', 'Monthly salary', 'salary.png', 'INCOME'),
+    (1, 'Food', 'Daily food expenses', 'food.png', 'EXPENSE'),
+    (1, 'Travel', 'Transport & fuel', 'travel.png', 'EXPENSE'),
 
-(2, 'Freelance', 'Freelance income', 'freelance.png', 'INCOME'),
-(2, 'Shopping', 'Clothes & gadgets', 'shopping.png', 'EXPENSE'),
+    (2, 'Freelance', 'Freelance income', 'freelance.png', 'INCOME'),
+    (2, 'Shopping', 'Clothes & gadgets', 'shopping.png', 'EXPENSE'),
 
-(3, 'Business', 'Business income', 'business.png', 'INCOME'),
-(3, 'Bills', 'Electricity & water bills', 'bills.png', 'EXPENSE');
+    (3, 'Business', 'Business income', 'business.png', 'INCOME'),
+    (3, 'Bills', 'Electricity & water bills', 'bills.png', 'EXPENSE');
 
 INSERT INTO TRANSACTIONS
 (user_id, category_id, note, amount, transcation_date, active_yn)
