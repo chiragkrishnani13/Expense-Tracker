@@ -1,0 +1,40 @@
+<div class="login-container">
+  <h2>Welcome Back</h2>
+  <p class="subtitle">Login to manage your expenses</p>
+
+  <form [formGroup]="user" >
+
+    <!-- Username -->
+    <div class="form-group">
+      <label>Username</label>
+      <input 
+        type="text" 
+        formControlName="username" 
+        placeholder="Enter username"
+      >
+      <small *ngIf="user.get('username')?.invalid && user.get('username')?.touched">
+        Username is required
+      </small>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label>Password</label>
+      <input 
+        type="password" 
+        formControlName="password" 
+        placeholder="Enter password"
+      >
+      <small *ngIf="user.get('password')?.invalid && user.get('password')?.touched">
+        Password is required
+      </small>
+    </div>
+    <p>Don't have Accout! <a routerLink="/register">register</a></p>
+
+    <!-- Button -->
+    <button type="submit" [disabled]="user.invalid">
+      Login
+    </button>
+
+  </form>
+</div>
