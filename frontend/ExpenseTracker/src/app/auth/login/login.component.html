@@ -30,6 +30,12 @@
       </small>
     </div>
     <p>Don't have Accout! <a routerLink="/register">register</a></p>
+    <a class="forgetPassword" (click)="openForgotPassword()">
+      Forgot password?
+    </a>
+
+
+
 
     <!-- Button -->
     <button type="submit" [disabled]="user.invalid">

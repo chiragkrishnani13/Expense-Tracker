@@ -3,6 +3,7 @@
   <p class="subtitle">Track your expenses smartly</p>
 
   <form [formGroup]="user" (ngSubmit)="onSumbit()">
+    <p style="color: red;" *ngIf="isError">{{errMessage}}</p>
 
     <div class="form-group">
       <label>Email</label>
