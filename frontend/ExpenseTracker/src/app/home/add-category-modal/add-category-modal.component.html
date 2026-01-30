@@ -1,0 +1,60 @@
+<h2 mat-dialog-title>Add / Edit Category</h2>
+
+<mat-dialog-content>
+  <p class="text-gray-600">Enter category details.</p>
+
+  <form #f="ngForm">
+
+    <!-- Title -->
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Title</mat-label>
+      <input matInput type="text" [(ngModel)]="category.category_name" name="category_name" ngModel required />
+    </mat-form-field>
+
+    <!-- Description -->
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Description</mat-label>
+      <textarea matInput [(ngModel)]="category.description" name="description" ngModel required></textarea>
+    </mat-form-field>
+
+    <!-- Icon -->
+    <!-- Icon Upload -->
+<div class="file-box w-full">
+  <label class="file-label">Category Icon *</label>
+
+  <input name="icon_url"  type="file" id="iconFile" hidden (change)="onFileSelected($event)" />
+
+  <label for="iconFile" class="file-upload-ui">
+    <span>Select icon</span>
+    <small *ngIf="fileName">{{ fileName }}</small>
+    <small *ngIf="!fileName">PNG, JPG up to 2MB</small>
+  </label>
+
+  <div class="preview" *ngIf="previewUrl">
+    <img [src]="previewUrl">
+  </div>
+</div>
+
+
+    <!-- Type -->
+    <mat-form-field appearance="outline" class="w-full">
+      <mat-label>Type</mat-label>
+      <mat-select [(ngModel)]="category.transcation_type"  name="transcation_type" ngModel required>
+        <mat-option value="INCOME">INCOME</mat-option>
+        <mat-option value="EXPENSE">EXPENSE</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </form>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button 
+    mat-raised-button 
+    color="primary" 
+    (click)="submit(f)" 
+    [disabled]="f.invalid">
+    Save
+  </button>
+</mat-dialog-actions>

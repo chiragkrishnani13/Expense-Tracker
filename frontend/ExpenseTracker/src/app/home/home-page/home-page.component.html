@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="category-grid">
+
+  <div class="category-card" *ngFor="let c of categorys">
+
+    <div class="card-top">
+      <div class="icon-circle">
+        <img [src]="c.icon_url" />
+      </div>
+
+      <div class="actions">
+  <button class="action-btn edit" (click)="editCategory(c)">
+    ✏️ <span>Edit</span>
+  </button>
+
+  <button class="action-btn delete" (click)="deleteCategory(c.category_id)">
+    🗑️ <span>Delete</span>
+  </button>
+</div>
+    </div>
+
+    <div class="card-body">
+      <h4>{{ c.category_name }}</h4>
+      <p>{{ c.description }}</p>
+    </div>
+
+    <div class="card-footer">
+      <span
+        class="type-badge"
+        [class.income]="c.transcation_type === 'INCOME'"
+        [class.expense]="c.transcation_type === 'EXPENSE'">
+        {{ c.transcation_type }}
+      </span>
+    </div>
+
+  </div>
+
+</div>

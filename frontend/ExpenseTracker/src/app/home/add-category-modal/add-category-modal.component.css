@@ -1,0 +1,139 @@
+/* ---------- Dialog ---------- */
+
+::ng-deep .mat-mdc-dialog-container {
+  background: #2f2f2f !important;
+  border-radius: 18px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+}
+
+::ng-deep .mat-mdc-dialog-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  padding: 22px 24px 8px;
+}
+
+::ng-deep .mat-mdc-dialog-content {
+  padding: 16px 24px;
+}
+
+::ng-deep .mat-mdc-dialog-actions {
+  padding: 16px 24px 20px;
+  border-top: 1px solid #3f3f3f;
+}
+
+/* ---------- Subtitle ---------- */
+
+.text-gray-600 {
+  color: #a1a1aa;
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+/* ---------- Inputs ---------- */
+
+.w-full {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+::ng-deep .mat-mdc-form-field {
+  background: #3a3a3a;
+  border-radius: 12px;
+}
+
+::ng-deep .mdc-text-field--outlined .mdc-notched-outline__leading,
+::ng-deep .mdc-text-field--outlined .mdc-notched-outline__trailing,
+::ng-deep .mdc-text-field--outlined .mdc-notched-outline__notch {
+  border-color: #555 !important;
+}
+
+::ng-deep input.mat-mdc-input-element,
+::ng-deep textarea.mat-mdc-input-element {
+  color: #fff;
+}
+
+::ng-deep .mat-mdc-form-field-label {
+  color: #a1a1aa !important;
+}
+
+textarea {
+  min-height: 90px;
+  resize: none;
+}
+
+/* ---------- File Upload ---------- */
+
+.file-label {
+  font-size: 13px;
+  color: #a1a1aa;
+  margin-bottom: 6px;
+  display: block;
+  font-weight: 500;
+}
+
+.file-upload-ui {
+  border: 2px dashed #555;
+  border-radius: 14px;
+  padding: 16px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #e5e7eb;
+  transition: 0.2s;
+  background: #3a3a3a;
+}
+
+.file-upload-ui:hover {
+  border-color: #6366f1;
+  background: #3f3f46;
+}
+
+.file-upload-ui span {
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.file-upload-ui small {
+  color: #a1a1aa;
+  font-size: 12px;
+}
+
+/* ---------- Preview ---------- */
+
+.preview {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.preview img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 8px;
+  border: 1px solid #444;
+}
+
+/* ---------- Buttons ---------- */
+
+::ng-deep button[mat-button] {
+  color: #a1a1aa;
+  font-weight: 500;
+}
+
+::ng-deep button[mat-raised-button] {
+  border-radius: 10px;
+  padding: 6px 22px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+}
+
+::ng-deep button[disabled] {
+  background: #444 !important;
+  color: #888 !important;
+}

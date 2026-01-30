@@ -1,0 +1,134 @@
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+/* Card */
+.category-card {
+  background: #111827;
+  border-radius: 16px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* Top */
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  background: #1f2937;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-circle img {
+  width: 22px;
+  height: 22px;
+}
+
+/* Actions */
+/* Actions container */
+.actions {
+  display: flex;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+/* Show actions only on hover of card */
+.category-card:hover .actions {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Base button */
+.action-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  font-weight: 500;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+/* Edit */
+.action-btn.edit {
+  color: #60a5fa;
+}
+
+.action-btn.edit:hover {
+  background: rgba(96,165,250,0.15);
+}
+
+/* Delete */
+.action-btn.delete {
+  color: #f87171;
+}
+
+.action-btn.delete:hover {
+  background: rgba(248,113,113,0.15);
+}
+
+/* Hide text on small screens */
+@media (max-width: 600px) {
+  .action-btn span {
+    display: none;
+  }
+}
+
+/* Body */
+.card-body h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #f9fafb;
+}
+
+.card-body p {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* Footer */
+.card-footer {
+  margin-top: auto;
+}
+
+.type-badge {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.income {
+  background: rgba(34,197,94,0.2);
+  color: #22c55e;
+}
+
+.expense {
+  background: rgba(239,68,68,0.2);
+  color: #ef4444;
+}
